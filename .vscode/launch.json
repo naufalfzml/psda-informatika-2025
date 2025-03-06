@@ -1,0 +1,108 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "SHA256Example",
+      "request": "launch",
+      "mainClass": "SHA256Example",
+      "projectName": "PSDASADAT2024_812bdaa0"
+    },
+    {
+      "type": "java",
+      "name": "mst_kruskal",
+      "request": "launch",
+      "mainClass": "mst_kruskal",
+      "projectName": "PSDASADAT2024_812bdaa0"
+    },
+    {
+      "type": "java",
+      "name": "quicksort",
+      "request": "launch",
+      "mainClass": "Bab9.quicksort",
+      "projectName": "PSDASADAT2024_812bdaa0"
+    },
+    {
+      "type": "java",
+      "name": "bogosort",
+      "request": "launch",
+      "mainClass": "Bab9.bogosort",
+      "projectName": "PSDASADAT2024_812bdaa0"
+    },
+    {
+      "type": "java",
+      "name": "BinarySearchTree",
+      "request": "launch",
+      "mainClass": "BinarySearchTree",
+      "projectName": "PSDASADAT2024_812bdaa0"
+    },
+    {
+      "type": "java",
+      "name": "BST",
+      "request": "launch",
+      "mainClass": "BST",
+      "projectName": "PSDASADAT2024_812bdaa0"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "PSDASADAT2024_812bdaa0"
+    },
+    {
+      "type": "java",
+      "name": "map",
+      "request": "launch",
+      "mainClass": "map",
+      "projectName": "PSDASADAT2024_812bdaa0"
+    },
+    {
+      "type": "java",
+      "name": "favnumber",
+      "request": "launch",
+      "mainClass": "Source.Bab5.favnumber",
+      "projectName": "PSDASADAT2024_812bdaa0"
+    },
+    {
+      "type": "java",
+      "name": "favnumber",
+      "request": "launch",
+      "mainClass": "favnumber",
+      "projectName": "PSDASADAT2024_812bdaa0"
+    },
+    {
+      "type": "java",
+      "name": "stl_queue",
+      "request": "launch",
+      "mainClass": "Source.Bab1.stl_queue",
+      "projectName": "PSDASADAT2024_a8c4c866"
+    },
+    {
+      "type": "java",
+      "name": "stl_stack",
+      "request": "launch",
+      "mainClass": "Source.Bab1.stl_stack",
+      "projectName": "PSDASADAT2024_a8c4c866"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "e:/KULIAH/SEMESTER-4/PSDASADAT2024/Source/Bab2",
+      "program": "e:/KULIAH/SEMESTER-4/PSDASADAT2024/Source/Bab2/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
