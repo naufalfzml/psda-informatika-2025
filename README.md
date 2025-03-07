@@ -1,19 +1,32 @@
-<h1 align="center"> Praktikum Struktur Data dan Algoritma <br /> S1 Sains Data UNS </h1>
+<h1 align="center"> Praktikum Struktur Data dan Algoritma <br /> S1 Informatika UNS </h1>
 <p align ="center">  <img width = "440" height "248" src = "Material\coverRepo.png" </p>
-<h3 align="center"> Tahun Akademik 2023/2024 Semester Genap </h3>
+<h3 align="center"> Tahun Akademik 2024/2025 Semester Genap </h3>
 <h3 align ="center">  >> <a align = "center" href = "Material\DaftarMateri.md"> 
 <span align="center">Lihat Materi</span></a> << </h3>
 
 <br>
-<p align="right"> <h3>Tim Asisten Dosen :</h3></p>
 
-- Abraham Willem Hersubagyo (IF 2022) [Github](https://github.com/AbrahamWillemH)
 
-- Muhammad Syafiq Ibrahim (IF 2022) [Github](https://github.com/SyafiqMSI)
+<div align="center">
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/hanchyp.png" width="100" height="100" style="border-radius:50%;" alt="Ferdinand"/>
+      <br><b>Farhan Cahya Permana</b> (Informatika 2023)  
+      <br>🚀 <a href="https://github.com/hanchyp" target="_blank">hanchyp</a>
+    </td>
+    <td align="center">
+      <img src="https://github.com/naufalfzml.png" width="100" height="100" style="border-radius:50%;" alt="Ivan"/>
+      <br><b>Fawwaz Naufal Maulana</b> (Informatika 2023)  
+      <br>🚀 <a href="https://github.com/ifwhy" target="_blank">naufalfzml</a>
+    </td>
+  </tr>
+</table>
+</div>
 
-<h3 align="left">Connect with us:</h3>
-<p align="left">
-  <a href="https://wa.me/+6281391611958" target="blank"><img align="center"
+## 💬 Contact Us
+<p align="center">
+  <a href="https://chat.whatsapp.com/E92gVDf1tChG1ZSiBYvFcc" target="blank"><img align="center"
          src="https://img.shields.io/badge/whatsapp-4B7F1.svg?style=for-the-badge&logo=whatsapp&logoColor=white"
          alt="azzar" height="30"/></a>
 </p>
