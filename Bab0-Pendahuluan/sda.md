@@ -29,8 +29,8 @@ Fungsi | Menentukan jenis nilai yang bisa disimpan | Mengelola data agar lebih e
 
 ## Apa itu Algoritma
 
-<div style="text-align: justify"> Algoritma adalah sekumpulan instruksi/metode yang dirancang secara tersusun dan berurutan yang digunakan untuk menyelesaikan suatu permasalahan tertentu, dimana setiap masalah harus memiliki kondisi awal yang harus terpenuhi agar dapat menjalankan algoritma. <br> 
-Secara umum, algoritma adalah langkah-langkah yang memiliki hubungan erat dengan perhitungan matematika dalam melakukan tugas dan memecahkan suatu permasalahan tertentu. Dalam bidang komputer dan pemrograman algoritma berguna sebagai alat untuk memproses data dan membuat program komputer dapat berjalan dengan efisien. Secara sederhana cara kerja algoritma adalah dengan memiliki data masukan (input)  yang akan menghasilkan data keluaran (output) agar mencapai tujuan yang diinginkan. </div>
+<p style="text-align: justify"> Algoritma adalah sekumpulan instruksi/metode yang dirancang secara tersusun dan berurutan yang digunakan untuk menyelesaikan suatu permasalahan tertentu, dimana setiap masalah harus memiliki kondisi awal yang harus terpenuhi agar dapat menjalankan algoritma. <br> 
+Secara umum, algoritma adalah langkah-langkah yang memiliki hubungan erat dengan perhitungan matematika dalam melakukan tugas dan memecahkan suatu permasalahan tertentu. Dalam bidang komputer dan pemrograman algoritma berguna sebagai alat untuk memproses data dan membuat program komputer dapat berjalan dengan efisien. Secara sederhana cara kerja algoritma adalah dengan memiliki data masukan (input)  yang akan menghasilkan data keluaran (output) agar mencapai tujuan yang diinginkan. </p>
 
 ## Karakteristik Algoritma
 Algoritma memiliki karakteristik yang harus dipenuhi dengan baik antara lain keterbatasan, ketegasan, input, output, dan efektivitas.
