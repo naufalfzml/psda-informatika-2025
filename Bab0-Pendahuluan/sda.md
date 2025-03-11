@@ -29,8 +29,8 @@ Fungsi | Menentukan jenis nilai yang bisa disimpan | Mengelola data agar lebih e
 
 ## Apa itu Algoritma
 
-Algoritma adalah sekumpulan instruksi/metode yang dirancang secara tersusun dan berurutan yang digunakan untuk menyelesaikan suatu permasalahan tertentu, dimana setiap masalah harus memiliki kondisi awal yang harus terpenuhi agar dapat menjalankan algoritma. <br>
-Secara umum, algoritma adalah langkah-langkah yang memiliki hubungan erat dengan perhitungan matematika dalam melakukan tugas dan memecahkan suatu permasalahan tertentu. Dalam bidang komputer dan pemrograman algoritma berguna sebagai alat untuk memproses data dan membuat program komputer dapat berjalan dengan efisien. Secara sederhana cara kerja algoritma adalah dengan memiliki data masukan (input)  yang akan menghasilkan data keluaran (output) agar mencapai tujuan yang diinginkan.
+<div style="text-align: justify"> Algoritma adalah sekumpulan instruksi/metode yang dirancang secara tersusun dan berurutan yang digunakan untuk menyelesaikan suatu permasalahan tertentu, dimana setiap masalah harus memiliki kondisi awal yang harus terpenuhi agar dapat menjalankan algoritma. <br> 
+Secara umum, algoritma adalah langkah-langkah yang memiliki hubungan erat dengan perhitungan matematika dalam melakukan tugas dan memecahkan suatu permasalahan tertentu. Dalam bidang komputer dan pemrograman algoritma berguna sebagai alat untuk memproses data dan membuat program komputer dapat berjalan dengan efisien. Secara sederhana cara kerja algoritma adalah dengan memiliki data masukan (input)  yang akan menghasilkan data keluaran (output) agar mencapai tujuan yang diinginkan. </div>
 
 ## Karakteristik Algoritma
 Algoritma memiliki karakteristik yang harus dipenuhi dengan baik antara lain keterbatasan, ketegasan, input, output, dan efektivitas.
@@ -48,7 +48,7 @@ Algoritma harus mampu menyelesaikan suatu permasalahan secara efisien dengan tet
 
 # • Kenapa Belajar Struktur Data dan Algoritma?
 
-Struktur data & algoritma sangat penting dalam bidang ilmu komputer. Keduanya merupakan fundamental untuk pemrograman. Struktur data digunakan untuk menyimpan dan mengatur data secara logis sedangkan algoritma adalah proses yang kita gunakan untuk menjalankan tugas tertentu. Selain itu, biasanya info-info loker(serius) memiliki programming test mengenai Struktur Data dan Algoritma.
+<div style="text-align: justify"> Struktur data & algoritma sangat penting dalam bidang ilmu komputer. Keduanya merupakan fundamental untuk pemrograman. Struktur data digunakan untuk menyimpan dan mengatur data secara logis sedangkan algoritma adalah proses yang kita gunakan untuk menjalankan tugas tertentu. Selain itu, biasanya info-info loker(serius) memiliki programming test mengenai Struktur Data dan Algoritma. </div>
 
 
 
