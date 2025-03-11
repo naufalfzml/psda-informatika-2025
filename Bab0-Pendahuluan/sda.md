@@ -48,7 +48,7 @@ Algoritma harus mampu menyelesaikan suatu permasalahan secara efisien dengan tet
 
 # • Kenapa Belajar Struktur Data dan Algoritma?
 
-<div style="text-align: justify"> Struktur data & algoritma sangat penting dalam bidang ilmu komputer. Keduanya merupakan fundamental untuk pemrograman. Struktur data digunakan untuk menyimpan dan mengatur data secara logis sedangkan algoritma adalah proses yang kita gunakan untuk menjalankan tugas tertentu. Selain itu, biasanya info-info loker(serius) memiliki programming test mengenai Struktur Data dan Algoritma. </div>
+<p align="justify"> Struktur data & algoritma sangat penting dalam bidang ilmu komputer. Keduanya merupakan fundamental untuk pemrograman. Struktur data digunakan untuk menyimpan dan mengatur data secara logis sedangkan algoritma adalah proses yang kita gunakan untuk menjalankan tugas tertentu. Selain itu, biasanya info-info loker (serius) memiliki programming test mengenai Struktur Data dan Algoritma. </p>
 
 
 
