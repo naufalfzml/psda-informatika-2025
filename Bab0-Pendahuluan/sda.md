@@ -12,4 +12,4 @@ Struktur data adalah cara untuk menyusun, menyimpan, dan juga mengatur data seca
 
 # • Kenapa Belajar Struktur Data?
 
-Struktur data sangat penting dalam  
+Struktur data sangat penting dalam dunia programming, terlebih lagi jika mencari loker (serius), saat interview biasanya terdapat programming test yang menguji pemahaman kamu mengenai Struktur Data. Selain itu, apabila memahami dengan baik mengenai Struktur Data, kamu akan merasa lebih mudah dalam menulis kode yang efisien, optimal, dan mudah dipahami.
