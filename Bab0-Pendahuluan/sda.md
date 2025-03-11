@@ -35,15 +35,15 @@ Secara umum, algoritma adalah langkah-langkah yang memiliki hubungan erat dengan
 ## Karakteristik Algoritma
 Algoritma memiliki karakteristik yang harus dipenuhi dengan baik antara lain keterbatasan, ketegasan, input, output, dan efektivitas.
 
-### Keterbatasan
+### • Keterbatasan
 Algoritma harus bisa/mampu menyelesaikan tugas dengan efisien (cepat) dengan berbagai keterbatasan yang ada.
-### Kepastian
+### • Kepastian
 Algoritma harus bisa menghasilkan output yang konsisten bila diberi suatu input yang sama.
-### Input
+### • Input
 Algoritma harus memiliki kondisi awal dari suatu data  yang diinputkan.
-### Output
+### • Output
 Algoritma harus memberikan hasil yang mampu menjawab pertanyaan dengan baik (output).
-### Efektivitas
+### • Efektivitas
 Algoritma harus mampu menyelesaikan suatu permasalahan secara efisien dengan tetap mempertimbangkan aspek memori atau waktu proses (kompleksitas).
 
 # • Kenapa Belajar Struktur Data dan Algoritma?
