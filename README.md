@@ -6,6 +6,7 @@
 
 <br>
 
+### 🧖🏻‍♂️ Tim Asisten Praktikum
 
 <div align="center">
 <table align="center">
@@ -25,13 +26,15 @@
 </div>
 
 ## 💬 Contact Us
+
+🤙🏻 **Join group WhatsApp untuk informasi lebih lanjut:**
 <p align="center">
   <a href="https://chat.whatsapp.com/E92gVDf1tChG1ZSiBYvFcc" target="blank"><img align="center"
          src="https://img.shields.io/badge/whatsapp-4B7F1.svg?style=for-the-badge&logo=whatsapp&logoColor=white"
          alt="azzar" height="30"/></a>
 </p>
 
-<h3 align="left">Languages and Tools:</h3>
+## 🛠️ Languages and Tools
 <p align="left">
   <a href="https://www.w3schools.com/java/" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/1ac69ce5fbc389725f16f989fa53c62d6e1b4883/programming%20languages/java.svg" alt="java" height="50" width="50" style="vertical-align: middle;" />
