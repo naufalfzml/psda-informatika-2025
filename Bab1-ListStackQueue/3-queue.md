@@ -45,4 +45,4 @@ atm.poll();
 
 ## Selengkapnya
 
-- [Java Queue]([https://en.cppreference.com/w/cpp/container/queue](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html))
+- [Java Queue](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)
