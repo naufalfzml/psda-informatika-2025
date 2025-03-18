@@ -33,7 +33,7 @@ String depan = atm.peek();
 
 Mengakses elemen yang berada di antrean paling belakang:
 ```java
-String belakang = ((LinkedList<String>) atm).getLast();
+String belakang = atm.getLast();
 ```
 
 ### Pop atau Dequeue
@@ -45,4 +45,4 @@ atm.poll();
 
 ## Selengkapnya
 
-- [C++ Queue](https://en.cppreference.com/w/cpp/container/queue)
+- [Java Queue]([https://en.cppreference.com/w/cpp/container/queue](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html))
