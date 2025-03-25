@@ -64,7 +64,8 @@ O(N^2) kali.
 
 ```java
 // ...
-int a = 0, i = N;
+int a = 0;
+int i = N;
 while (i > 0) {
 	a += i;
 	i /= 2;
