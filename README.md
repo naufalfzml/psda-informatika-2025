@@ -19,7 +19,7 @@
     <td align="center">
       <img src="https://github.com/naufalfzml.png" width="100" height="100" style="border-radius:50%;" alt="Ivan"/>
       <br><b>Fawwaz Naufal Maulana</b> (Informatika 2023)  
-      <br>🚀 <a href="https://github.com/ifwhy" target="_blank">naufalfzml</a>
+      <br>🚀 <a href="https://github.com/naufalfzml" target="_blank">naufalfzml</a>
     </td>
   </tr>
 </table>
