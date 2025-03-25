@@ -89,6 +89,13 @@ for (i = N / 2; i <= N; i++) {
 }
 // ...
 ```
+Jika diperhatikan, j terus berlipat ganda hingga kurang dari atau sama dengan N. Beberapa kali, kita dapat menggandakan angka hingga kurang dari N akan menjadi log(N).  
+Mari kita ambil contoh di sini.  
+untuk N = 16, j = 2, 4, 8, 16  
+untuk N = 32, j = 2, 4, 8, 16, 32  
+Jadi, j akan dijalankan untuk langkah-langkah O(log N).  
+i berjalan selama N/2 langkah.  
+Jadi, langkah total = O(N / 2 * log (N)) = O(N*logN)
 
 ### O (N!): Faktorial
 
@@ -112,14 +119,6 @@ public class Example {
 
 // ...
 ```
-
-Jika diperhatikan, j terus berlipat ganda hingga kurang dari atau sama dengan N. Beberapa kali, kita dapat menggandakan angka hingga kurang dari N akan menjadi log(N).  
-Mari kita ambil contoh di sini.  
-untuk N = 16, j = 2, 4, 8, 16  
-untuk N = 32, j = 2, 4, 8, 16, 32  
-Jadi, j akan dijalankan untuk langkah-langkah O(log N).  
-i berjalan selama N/2 langkah.  
-Jadi, langkah total = O(N / 2 * log (N)) = O(N*logN)
 
 
 ## 3 - Perbandingan Pertumbuhan Kompleksitas
