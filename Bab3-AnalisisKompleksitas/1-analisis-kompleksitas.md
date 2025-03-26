@@ -102,21 +102,34 @@ Jadi, langkah total = O(N / 2 * log (N)) = O(N*logN)
 ```java
 // ...
 import java.util.Arrays;
-import java.util.List;
 
-public class Example {
+public class PermutationExample {
     public static void main(String[] args) {
-        // Membuat array integer
-        Integer[] array = {1, 2, 3, 4, 5};
+        int[] arr = {1, 2};
+        permute(arr, 0);
+        int x = arr.length;
+        System.out.println(x);
+    }
 
-        // Mengubah array menjadi List
-        List<Integer> list = Arrays.asList(array);
+    public static void permute(int[] arr, int index) {
+        if (index == arr.length - 1) {
+            System.out.println(Arrays.toString(arr));
+            return;
+        }
 
-        // Sekarang list berisi elemen-elemen dari array
-        System.out.println(list); // Output: [1, 2, 3, 4, 5]
+        for (int i = index; i < arr.length; i++) {
+            swap(arr, index, i);
+            permute(arr, index + 1);
+            swap(arr, index, i); // Kembalikan ke keadaan semula (backtracking)
+        }
+    }
+
+    private static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 }
-
 // ...
 ```
 
