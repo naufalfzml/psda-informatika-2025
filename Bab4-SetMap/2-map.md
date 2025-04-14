@@ -24,10 +24,10 @@ Map<String, Mahasiswa> dataMhs = new HashMap<>();
 Mengaitkan mahasiswa dengan indeks **L0122116** dengan obyek dari struct pada map `dataMhs`:
 ```java
 Mahasiswa mhs = new Mahasiswa();
-mhs.setNama("Muhammad Syafiq Ibrahim");
+mhs.setNama("Farhan Cahya Permana");
 mhs.setProdi("Informatika");
-mhs.setAngkatan(2022);
-dataMhs.put("L0122116", mhs);
+mhs.setAngkatan(2023);
+dataMhs.put("L0123051", mhs);
 
 ```
 
@@ -35,7 +35,7 @@ dataMhs.put("L0122116", mhs);
 
 Mendapatkan obyek mahasiswa dengan indeks **L0122116** dari map `dataMhs`:
 ```java
-Mahasiswa mhs = dataMhs.get("L0122116");
+Mahasiswa mhs = dataMhs.get("L0123051");
 System.out.println("Nama: " + mhs.getNama());
 System.out.println("Prodi: " + mhs.getProdi());
 System.out.println("Angkatan: " + mhs.getAngkatan());
@@ -43,20 +43,20 @@ System.out.println("Angkatan: " + mhs.getAngkatan());
 
 Untuk memaninpulasi obyek mahasiswa dengan indeks **L0122116** dalam map `dataMhs`:
 ```java
-dataMhs.get("L0122116").setNama("Syafiq");
+dataMhs.get("L0123051").setNama("Farhan");
 
 // atau menggunakan reference:
 
-Mahasiswa mhs = dataMhs.get("L0122116");
-mhs.setNama("Syafiq");
+Mahasiswa mhs = dataMhs.get("L0123051");
+mhs.setNama("Farhan");
 ```
 
 Mengecek apakah mahasiswa dengan indeks **L0122116** berada dalam `dataMhs`:
 ```java
-if (dataMhs.containsKey("L0122116")) {
-    System.out.println("L0122116 merupakan mahasiswa UNS");
+if (dataMhs.containsKey("L0123051")) {
+    System.out.println("L0123051 merupakan mahasiswa UNS");
 } else {
-    System.out.println("L0122116 bukan merupakan mahasiswa UNS");
+    System.out.println("L0123051 bukan merupakan mahasiswa UNS");
 }
 
 ```
@@ -65,7 +65,7 @@ if (dataMhs.containsKey("L0122116")) {
 
 Menghapus **L0122116** dari `dataMhs`:
 ```java
-dataMhs.remove("L0122116");
+dataMhs.remove("L0123051");
 ```
 
 ### Iteration
