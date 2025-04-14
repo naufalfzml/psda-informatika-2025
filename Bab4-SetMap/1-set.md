@@ -16,20 +16,20 @@ Sebagai contoh:
 ```java
 Set<Integer> favNumbers = new HashSet<>();
 ```
-Mendeklarasikan himpunan `fav_numbers` dengan tipe anggota elemen berupa `int`.
+Mendeklarasikan himpunan `favNumbers` dengan tipe anggota elemen berupa `int`.
 
 ## Operasi
 
 ### Insertion
 
-Memasukkan elemen angka `36` ke dalam himpunan `fav_numbers`:
+Memasukkan elemen angka `36` ke dalam himpunan `favNumbers`:
 ```java
 favNumbers.add(36);
 ```
 
 ### Access
 
-Mengecek apakah angka `36` ada dalam himpunan `fav_numbers`:
+Mengecek apakah angka `36` ada dalam himpunan `favNumbers`:
 ```java
 if (favNumbers.contains(36)) {
     System.out.println("Angka 36 merupakan salah satu angka favorit saya");
@@ -52,7 +52,7 @@ while (it.hasNext()) {
 
 ### Removal
 
-Menghapus keanggotaan angka `36` dari himpunan `fav_numbers`:
+Menghapus keanggotaan angka `36` dari himpunan `favNumbers`:
 ```java
 favNumbers.remove(36);
 ```
