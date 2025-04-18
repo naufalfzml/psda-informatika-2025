@@ -1,228 +1,349 @@
-# 1 - Tree
+# 5 - Tree
 
-## Konsep Tree
+- [5 - Tree](#5---tree)
+  - [Definition](#definition)
+    - [Terminologi](#terminologi)
+    - [Perbedaan dengan Struktur Data yang Lain](#perbedaan-dengan-struktur-data-yang-lain)
+  - [Kenapa menggunakan Tree?](#kenapa-menggunakan-tree)
+  - [Contoh Kasus](#contoh-kasus)
+    - [1. Sistem Perpustakaan UNS](#1-sistem-perpustakaan-uns)
+    - [2. File Explorer](#2-file-explorer)
+    - [3. DOM HTML](#3-dom-html)
+  - [Implementasi](#implementasi)
+    - [1. Meng-*import* Library ArrayList](#1-meng-import-library-arraylist)
+    - [2. Membuat Class Node](#2-membuat-class-node)
+    - [3. Membuat Constructor Node pada Class Node](#3-membuat-constructor-node-pada-class-node)
+    - [4. Membuat Method "insert()"](#4-membuat-method-insert)
+    - [5. Membuat Method "remove()"](#5-membuat-method-remove)
+    - [6. Membuat Method "\_traversal()"](#6-membuat-method-_traversal)
+    - [7. Membuat Method "traversal()"](#7-membuat-method-traversal)
+  - [Contoh](#contoh)
+  - [Tambahan](#tambahan)
+    - [Traversal Post-Order](#traversal-post-order)
 
-Tree adalah sebuah struktur data abstrak (implementasinya sesuai dengan keinginan pengguna) yang merepresentasikan pohon/hirarki yang tersusun atas `node` - `node` yang saling tersambung. Untuk dianggap sebagai sebuah tree, masing-masing `node` harus memiliki tepat satu orang tua (untuk selanjutnya disebut `parent`), kecuali `root node`, atau `node` yang pertama. Setiap `node` dapat memiliki berapapun anak (untuk selanjutnya disebut `child`), termasuk 0.
 
-Ilustrasi di bawah ini merupakan salah satu contoh struktur data Tree.
+## Definition
+Tree merupakan konsep Struktur Data non-linear di mana data-data di dalamnya saling berhubungan (*linked*) dan disusun secara hierarki (bertingkat). Tree biasanya digunakan untuk menyimpan data yang memiliki hubungan secara hierarki antara satu dengan yang lainnya. Tree mengambil konsep dari sebuah pohon yang terbalik dengan ilustrasi sebagai berikut:
 
-<div align="center">
+![Tree_Definition](Tree_example_1_1.png)
+<hr>
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Tree_%28computer_science%29.svg/421px-Tree_%28computer_science%29.svg.png)
+### Terminologi
+Tree tersusun atas *node-node* yang dapat dikategorikan sebagai *root node*, *parent node*, *child node*, dan *leaf*. Adapun penjelasan dari beberapa terminologi-terminologi lain pada tree yaitu:
+- **Node**, merupakan data yang dihubungkan. Pada ilustrasi di atas, contoh *node* yaitu A, B, C, D, ... dan O
+- **Edge**, merupakan hubungan di antara *node*. Pada ilustrasi di atas, contoh *edge* yaitu a, b, c, d, ... dan n
+- **Root Node**, merupakan *node* pertama atau *node* paling atas dari sebuah *tree*. Pada ilustrasi di atas, *root node* merupakan *node* A
+- **Parent Node**, adalah semua *node* yang memiliki *child node*. Pada ilustrasi di atas, *parent node* yaitu *node* A, B, C, D, E, F, G, H, dan I
+- **Child Node**, adalah semua *node* yang dimiliki oleh *parent node*. Pada konsep *tree*, *child node* tidak dibatasi jumlahnya. Contoh *child node* pada ilustrasi di atas yaitu *node* B, C, D, E, F, G, H, I, K, L, M, N, dan O
+- **Leaf Node**, adalah semua *node* yang tidak memiliki *child node* (berada di paling bawah). Pada ilustrasi di atas *leaf node* yaitu *node* J, K, L, M, N, dan O
+- **Sub Tree**, adalah sebagian *tree* yang lebih kecil yang berada di dalam *tree* yang lebih besar. Contoh *sub tree* pada ilustrasi di atas yaitu *tree* dari *node* B, E, F, dan J.
+- **Size Tree**, adalah jumlah semua *node* di dalam *tree*. Pada ilustrasi di atas, *size tree*-nya yaitu 15
+- **Height of Tree**, adalah ketinggian *tree* dihitung dari *leaf node* hingga *root node*. *Height of Tree* juga dapat diketahui dengan menghitung panjang *edge* dari *leaf node* hingga *root node*. Pada ilustrasi di atas, *height of tree*-nya yaitu 3
+- **Depth of Tree**, adalah kedalaman *tree* dihitung dari *root node* hingga *leaf node*. *Depth of Tree* juga dapat diketahui dengan menghitung panjang *edge* dari *root node* hingga *leaf node*. Pada ilustrasi di atas, *depth of tree*-nya yaitu 3
 
-</div>
+### Perbedaan dengan Struktur Data yang Lain
+- Perbedaan *tree* dengan ***list*** yaitu *tree* disusun secara bertingkat-tingkat (hierarki) sedangkan *list* disusun secara lurus (linear)
+- Perbedaan *tree* dengan ***graph*** yaitu struktur *tree* tidak membentuk *cycle* sedangkan *graph* membentuk *cycle*
 
-Kita bisa melihat bahwa root dari Tree di atas adalah node 2 yang paling atas, yang tidak memiliki `parent`
+## Kenapa menggunakan Tree?
+- *Tree* mampu melakukan porses *insertion* dan *deletion* data dengan efisien karena menggunakan konsep *list*
+- *Tree* digunakan untuk menyimpan dan mengorganisasi data secara **hierarkial** (bertingkat)
+- *Tree* dapat digunakan untuk memudahkan dalam **proses *searching*** dengan cepat. Contoh Binary Search Tree dengan kompleksitas wakti O(log *n*)
+- *Tree* dapat digunakan untuk memudahkan **proses *sorting***. Contoh proses pengaksesan *In-Order* pada Binary Search Tree
+- Konsep *Tree* biasanya digunakan pada proses penyimpanan data yang besar (*big data*) seperti File Explorer, Database, DNS, dan HTML DOM (Documment Object Model)
 
-> Pertanyaan tantangan: Ada banyak jenis struktur data Tree yang mungkin memiliki peraturan yang berbeda-beda dalam pembuatan `node`nya. Apa sajakah contohnya?
-Contoh implementasi dari struktur data Tree adalah direktori simbolis untuk berkas yang kalian simpan pada sistem operasi kalian. Untuk masing-masing folder, `root` adalah folder yang kalian buka, dan `children` dari root tersebut adalah semua isi dari folder yang kalian buka.
+## Contoh Kasus
+### 1. Sistem Perpustakaan UNS
+<img src="Tree_example_1_2.png">
 
-## Operasi Tree
+### 2. File Explorer
+```
+├── Applications
+│   ├── Hades.app
+│   │   └── Contents
+│   │       ├── Info.plist
+│   │       ├── MacOS
+│   │       │   └── run.sh
+│   │       └── Resources
+│   │           └── shortcut.icns
+│   ├── INSIDE.app
+│   │   └── Contents
+│   │       ├── Info.plist
+│   │       ├── MacOS
+│   │       │   └── run.sh
+│   │       └── Resources
+│   │           └── shortcut.icns
+│   ├── Stardew Valley.app
+│   │   └── Contents
+│   │       ├── Info.plist
+│   │       ├── MacOS
+│   │       │   └── run.sh
+│   │       └── Resources
+│   │           └── shortcut.icns
+...
+```
 
-Sebagai sebuah struktur data, Tree memiliki beberapa operasi yang dapat digunakan untuk memanipulasi data yang disimpan didalamnya. Operasi-operasi tersebut adalah `insertion`, `deletion`, dan `traversal`
+### 3. DOM HTML
+<img src="Tree_example_1_3.png">
 
-Sebelum membuat operasi-operasi tersebut, kita harus membuat struktur data Tree kita terlebih dahulu, karena Java tidak memiliki struktur Tree bawaan. Implementasi Tree dapat dilakukan dengan berbagai cara, misalkan menggunakan class dan pointer untuk menandakan hubungan. Namun, kita akan menggunakan struct untuk menyimpan data dan vector untuk menyimpan children-children dari Tree kita.
+## Implementasi
+> **Note**: Dalam bahasa Java, terdapat Library untuk struktur data *tree* yaitu *TreeModel*. Namun pada praktikum ini, **kita akan membuat *tree* kita sendiri dari awal**.
 
 ```java
-// ...
+root.insert(childNode_1);
+root.remove_with_index(0);
+root.traversal();
+```
+
+Terdapat tiga method utama dalam membuat *tree*. Ketiga *method* tersebut yaitu *insert*, *remove*, dan *traversal* (mengakses *node*). Dalam membuat *tree* dengan bahasa Java, kalian dapat mengikuti langkah-langkah berikut:
+
+### 1. Meng-*import* Library ArrayList
+```java
 import java.util.ArrayList;
-import java.util.List;
-
-class Node {
-    int m_data;
-    List<Node> m_children;
-}
-// ...
 ```
-
-Kita juga dapat menambahkan constructor untuk mempermudah pemrograman kita
-
+### 2. Membuat Class Node
 ```java
-// ...
-public class Node {
-    private int m_data;
+class Node{
+    int data;   // tipe data bebas, berfungsi untuk menyimpan data
+    ArrayList<Node> childrenNode = new ArrayList<>();    
+}
+```
+>**Note:** Class Node digunakan untuk membuat *object* Node dengan atributdata dan childrenNode.
 
-    // Constructor
+>**Note:** Menggunakan ArrayList dengan tipe data Node untuk menyimpan object-object *node* dari class Node di ArrayList *childrenNode* sebagai *child node*.
+
+### 3. Membuat Constructor Node pada Class Node
+```java
+class Node{
+    int data;   // tipe data bebas, berfungsi untuk menyimpan data
+    ArrayList<Node> childrenNode = new ArrayList<>();
+
+    // cunstructor
     Node(int data) {
-        m_data = data;
-        m_children = new ArrayList<>();
-    }
-    // Method lainnya
-    // ...
-}
-// ...
-```
-
-Lalu, kita dapat mendefinisikan `node` - `node` yang akan kita gunakan pada main seperti di bawah ini.
-
-```java
-// ...
-public class Main {
-    public static void main(String[] args) {
-        Node root = new Node(5);
-        Node child_0_0 = new Node(3);
-        Node child_0_1 = new Node(4);
-        // ...
+        this.data = data;
     }
 }
-// ...
 ```
+>**Note:** Constructor berfungsi untuk memudahkan pembuatan *object* dari *class* Node.
 
-### Insertion
-
-Insertion adalah operasi yang didefinisikan sebagai aksi memasukkan nilai untuk disimpan pada sebuah Tree. Tergantung dari jenisnya, akan ada banyak aturan mengenai insertion pada Tree. Namun untuk sekarang, kita akan belajar menggunakan Tree yang sederhana.
-
-Pada praktikum kali ini, karena `children` diimplementasikan menggunakan vector dan di-insert menggunakan pushback, maka semua insertion yang dilakukan merupakan insertion sebagai `children` yang paling kanan. Kalian dapat memodifikasi rancangan ini dengan kemampuan menyisipkan masukan di list/array.
-
+### 4. Membuat Method "insert()"
 ```java
-// ...
-void insert(Node node) {
-    m_children.add(node);
+class Node{
+    int data;   // tipe data bebas, berfungsi untuk menyimpan data
+    ArrayList<Node> childrenNode = new ArrayList<>();
+
+    // cunstructor
+    Node(int data) {
+        this.data = data;
+    }
+
+    // Method
+    public void insert(Node new_node) {
+        childrenNode.add(new_node);
+    }
 }
-// ...
 ```
+>**Note:** Method ini tidak mengembalikan nilai apa apa (void) karena method ini memodifikasi object dari class Node dengan menambahkan *child node* ke dalam object untuk membentuk *tree*. Method *insert()* mengambil parameter object *new_node* dari class Node.
 
-Cara penggunaan dari metode ini adalah memanggil metode insert dari node `parent` dari posisi yang kalian masukkan. Sebagai contoh, pada gambar Tree di bagian awal, jika kalian ingin memasukkan `node` 4 maka kalian memanggil metode insert dari `node` 9.
-
-### Deletion
-
-Operasi penghapusan pada struktur data tree dilakukan dengan cara menghapus node sesuai dengan urutan yang kita inginkan. Kita dapat membuat metode delete kita seperti di bawah ini.
-
+### 5. Membuat Method "remove()"
 ```java
-// ...
-boolean deleteNodeIndex(int index) {
-    if (m_children.isEmpty()) {
-        return false;
-    } else {
-        if (m_children.size() <= index) {
-            return false;
-        } else {
-            m_children.remove(index);
-            return true;
+...
+    // Method
+    public void insert(Node new_node) {
+        childrenNode.add(new_node);
+    }
+    public void remove_with_index(int index) {
+        // memeriksa ketersediaan index yang dicari
+        // jika index out of bound
+        if (index < 0 || index >= childrenNode.size()) {
+            System.out.println("Child node dengan index " + index + " tidak ditemukan di dalam range index 0 - " + childrenNode.size());
+            return;
+        }
+
+        // jika index child node ditemukan
+        childrenNode.remove(index);
+        System.out.println("Child node dengan index " + index + " berhasil dihapus");
+    }
+...
+```
+>**Note:** Method ini akan menghapus *child node* dengan indeks tertentu dari *parent node*. Indeks ditentukan bredasarkan urutan *insertion* dari *child node* yang ditambahkan.
+
+### 6. Membuat Method "_traversal()"
+```java
+...
+    private void _traversal(Node node, int depth) {
+        for (int i = 0; i < depth; i++) {   // memperhatikan kedalaman tree
+            System.out.print("---");         // untuk memudahkan pembacaan tree
+        }
+        System.out.println("> " + node.data);
+        
+        for (Node child : node.childrenNode) {
+            _traversal(child, depth+1);
         }
     }
+...
+```
+>**Note:** Method *_traversal()* merupakan fungsi yang digunakan untuk mengakses *node-node* di dalam *tree*. Method ini memiliki *access modifier private* di mana hanya *class* Node yang dapat mengakses *method* ini.
+
+>**Note:** Method *_traversal()* mengambil parameter *node* dan *depth* di mana *node* merupakan *node* yang akan dijelajahi.
+
+>**Note:** Method *_traversal()* menggunakan konsep Depth First Search yang menelusuri sejauh mungkin kedalaman *tree* terlebih dahulu. Method ini juga menerapkan konsep traversal pre-order (urut dari *root node*).
+
+>**Note:** Method *_traversal()* mengimplementasikan konsep rekursi, di mana *method* ini akan memanggil sendiri *method* tersebut. Rekursi *method* ini akan berhenti ketika semua *child node* di dalam *childrenNode* sudah dijelajahi.
+
+### 7. Membuat Method "traversal()"
+```java
+public void traversal(){
+        _traversal(this, 0);    // mengambil dari kedalaman 0
+    }
+```
+>**Note:** Method *traversal()* merupakan *method* yang dibuat untuk memudahkan penggunaan *method _traversal*. Method ini tidak mengambil parameter dan akan menjelajahi *node* yang dipilih untuk mengakses semua *child node* di dalam *node* tersebut satu persatu.
+
+## Contoh
+```java
+import java.util.ArrayList;
+
+class Node{
+    int data;   // tipe data bebas, berfungsi untuk menyimpan data
+    ArrayList<Node> childrenNode = new ArrayList<>();
+
+    // cunstructor
+    Node(int data) {
+        this.data = data;
+    }
+
+    // Method
+    public void insert(Node new_node) {
+        childrenNode.add(new_node);
+    }
+    public void remove_with_index(int index) {
+        // memeriksa ketersediaan index yang dicari
+        // jika index out of bound
+        if (index < 0 || index >= childrenNode.size()) {
+            System.out.println("Child node dengan index " + index + " dari parent node '" + this.data + "' tidak ditemukan di dalam range index 0 - " + childrenNode.size());
+            return;
+        }
+
+        // jika index child node ditemukan
+        childrenNode.remove(index);
+        System.out.println("Child node dari parent node '" + this.data + "' dengan index " + index + " berhasil dihapus");
+    }
+    private void _traversal(Node node, int depth) {
+        for (int i = 0; i < depth; i++) {     // memperhatikan kedalaman tree
+            System.out.print("---");         // untuk memudahkan pembacaan tree
+        }
+        System.out.println("> " + node.data);
+        
+        for (Node child : node.childrenNode) {
+            _traversal(child, depth+1);
+        }
+    }
+    public void traversal(){
+        _traversal(this, 0);    // mengambil dari kedalaman 0
+    }
 }
-// ...
+
+public class TreeMain {
+    public static void main(String[] args) {
+        Node root = new Node(35);
+        Node childNode_1 = new Node(1);
+        Node childNode_2 = new Node(3);
+        Node childNode_3 = new Node(6);
+        Node childNode_1_1 = new Node(83);
+        Node childNode_1_2 = new Node(100);
+        Node childNode_2_1 = new Node(135);
+        Node childNode_2_2 = new Node(143);
+        Node childNode_3_1 = new Node(183);
+        Node childNode_3_1_1 = new Node(2);
+
+        root.insert(childNode_1);
+        root.insert(childNode_2);
+        root.insert(childNode_3);
+        childNode_1.insert(childNode_1_1);
+        childNode_1.insert(childNode_1_2);
+        childNode_2.insert(childNode_2_1);
+        childNode_2.insert(childNode_2_2);
+        childNode_3.insert(childNode_3_1);
+        childNode_3_1.insert(childNode_3_1_1);
+
+        root.traversal();
+
+        System.out.println("");
+
+        childNode_1.remove_with_index(100);
+        childNode_1.remove_with_index(1);
+        
+        System.out.println("");
+
+        root.traversal();
+    }
+}
+
+/* Output
+
+    > 35
+    ---> 1
+    ------> 83
+    ------> 100
+    ---> 3
+    ------> 135
+    ------> 143
+    ---> 6
+    ------> 183
+    ---------> 2
+
+    Child node dengan index 100 dari parent node '1' tidak ditemukan di dalam range index 0 - 2
+    Child node dari parent node '1' dengan index 1 berhasil dihapus
+
+    > 35
+    ---> 1
+    ------> 83
+    ---> 3
+    ------> 135
+    ------> 143
+    ---> 6
+    ------> 183
+    ---------> 2
+
+*/
 ```
 
-Cara penggunaan metode di atas adalah dengan memanggilnya pada `parent` dari `node` yang ingin kita hapus, dan memberikan urutan `node` tersebut mulai dari 0, dihitung dari `node` yang paling kiri. Misalnya, pada contoh gambar Tree di atas, jika kita ingin menghapus `node` `4`, maka kita memanggil metode ini seperti `node_9.deleteNodeIndex(0)` karena merupakan satu-satunya `child` maka memiliki indeks 0.
+## Tambahan
+### Traversal Post-Order
+Pada contoh di atas, telah digunakan konsep traversal *pre-order* di mana *node* yang diakses yaitu urut dari *root node* menuju ke *leaf node*. 
 
-Tatacara deletion pada implementasi kita di atas merupakan recursive deletion, di mana jika kalian menghapus sebuah `node` yang memiliki banyak `child`, maka semua `child` itu akan ikut terhapus.
-
-### Traversal
-
-Traversal dalam struktur data Tree dapat didefinisikan dengan "mengunjungi tiap-tiap `node` tepat satu kali". Ada beberapa jenis Tree traversal yang ada, seperti `postorder`, `preorder`, dan `inorder`. Kita tidak akan menggunakan `inorder` pada praktikum ini karena jenis traversal itu hanya digunakan untuk binary tree. Tree traversal `postorder` dan `preorder` memiliki pseudocode seperti di bawah ini.
-
+Adapun konsep traversal yang lain yaitu ***post-order*** di mana *node* yang diakses yaitu urut dari *leaf node* menuju *root node*. Adapun implementasinya yaitu:
+```java
+...
+    private void _post_traversal(Node node, int depth) {
+        for (Node child : node.childrenNode) {  // akan rekursi dulu baru di-print
+            _post_traversal(child, depth+1);
+        }
+        for (int i = 0; i < depth; i++) {       // memperhatikan kedalaman tree
+            System.out.print("---");          // untuk memudahkan pembacaan tree
+        }
+        System.out.println("> " + node.data);
+        
+    }
+    public void post_traversal(){
+        _post_traversal(this, 0);    // mengambil dari kedalaman 0
+    }
+...
 ```
-Preorder
-  1. Datangi salah satu node sebagai parent
-  2. Proses node tersebut
-  3. Iterasi seluruh children dari node tersebut, untuk setiap iterasi
-  mengulangi langkah 1 dengan node yang sedang dijelajahi sebagai parentnya
-Postorder
-  1. Datangi salah satu node sebagai parent
-  2. Iterasi seluruh children dari node tersebut, untuk setiap iterasi
-     mengulangi langkah 1 dengan node yang sedang dijelajahi sebagai parentnya
-  3. Proses node tersebut
-```
-
-> Untuk penggunaan Tree traversal secara interaktif, silakan melihat video praktikum
-Kita dapat membuat metode traversal kita seperti potongan di bawah ini. Perhatikan bagaimana kita menggunakan `depth` untuk memberikan _style_ ke kode kita supaya lebih mudah dipahami hubungannya dengan `node` lainnya (apakah ancestor, sibling, atau descendant).
+>**Note:** Post-Order Traversal akan melakukan rekursi terlebih dahulu sebelum mengakses (menge-*print*) *node*.
 
 ```java
-// ...
-void _preOrder(int depth) {
-    for (int i = 0; i < depth; i++) {
-        System.out.print("--");
-    }
-    System.out.println("> " + m_data);
-    for (Node child : m_children) {
-        child._preOrder(depth + 1);
-    }
-}
+root.post_traversal();
 
-void preOrder() {
-    System.out.println("Preorder Traversal: ");
-    _preOrder(0);
-}
-
-void _postOrder(int depth) {
-    for (Node child : m_children) {
-        child._postOrder(depth + 1);
-    }
-    for (int i = 0; i < depth; i++) {
-        System.out.print("--");
-    }
-    System.out.println("> " + m_data);
-}
-
-void postOrder() {
-    System.out.println("Postorder Traversal: ");
-    _postOrder(0);
-}
-// ...
-```
-
-## Contoh Penggunaan Library
-
-Di sini kita akan mencoba menerapkan gambar Tree di atas dalam struktur data yang sudah kita buat. Sebagai contoh, kita hanya akan menggunakan 2 kedalaman dari gambar tersebut (hanya sampai baris 2, 10, 6, 9).
-
-1. Pertama, kita dapat mendeklarasikan objek-objek `node` kita. Kita akan menggunakan variabel `root` untuk root dan `child_{id}` untuk penamaan children.
-
-```java
-// ...
-Node root = new Node(2);
-Node child_0 = new Node(7);
-Node child_1 = new Node(5);
-Node child_2 = new Node(2);
-Node child_3 = new Node(10);
-Node child_4 = new Node(6);
-Node child_5 = new Node(9);
-// ...
-```
-
-2. Lalu, kita dapat memasukkan child ke parentnya satu-persatu menggunakan insert.
-
-```java
-// ...
-child_0.insert(child_2);
-child_0.insert(child_3);
-child_0.insert(child_4);
-child_1.insert(child_5);
-root.insert(child_0);
-root.insert(child_1);
-// ...
-```
-
-> Pertanyaan Tantangan:
->
-> Mengapa kita melakukan insert dari bawah? Mengapa kita tidak melakukan insert mulai dari `root`? Apa yang terjadi jika kita melakukan insert mulai dari `root`? Mengapa hal itu bisa terjadi?
-3. Setelah ini, kalian dapat menggunakan operasi lainnya seperti delete atau traversal. Mari kita coba melakukan Preorder traversal
-
-```java
-// Tree.java
-// ...
-root.preOrder();
-root.postOrder();
-// ...
-```
-
-```
-Output:
-Preorder Traversal:
-> 2
---> 7
-----> 2
-----> 10
-----> 6
---> 5
-----> 9
-Postorder Traversal:
-----> 2
-----> 10
-----> 6
---> 7
-----> 9
---> 5
-> 2
+/* Output
+    ------> 83
+    ---> 1
+    ------> 135
+    ------> 143
+    ---> 3
+    ---------> 2
+    ------> 183
+    ---> 6
+    > 35
+*/
 ```
