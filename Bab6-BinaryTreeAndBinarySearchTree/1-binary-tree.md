@@ -3,9 +3,12 @@
 ## Konsep Binary Tree
 Tree merupakan struktur data yang biasanya tidak kontinu, dimana sebuah node bisa memiliki beberapa "anak" (child node), dan berbeda dengan Graph, jalan menuju sebuah child node hanya bisa dicapai melalui maksimal 1 node, dimana pada Graph, dimungkinkan bahwa 1 node bisa dicapai dari banyak node lainnya. Sebuah node yang tidak memiliki child node sama sekali dinamakan leaf node.
 
-Jenis Tree yang paling umum digunakan adalah Binary Tree, yang sebenarnya memiliki konsep yang sama dengan Tree pada umumnya. Namun bedanya, Binary Tree memiliki jumlah maksimal 2 child, yang secara spesifik dapat disebut left child dan right child.  
-  
+Jenis Tree yang paling umum digunakan adalah Binary Tree, yang sebenarnya memiliki konsep yang sama dengan Tree pada umumnya. Namun bedanya, Binary Tree memiliki jumlah maksimal 2 child, yang secara spesifik dapat disebut left child dan right child. 
 ![Gambar Binary Tree](https://www.geeksforgeeks.org/wp-content/uploads/binary-tree-to-DLL.png)
+
+## Perbedaan Binary Tree dengan Tree lainnya
+![Perbedaan Tree](Tree_BST_AVL_RB.png)
+  
 
 ## Implementasi Binary Tree
 
