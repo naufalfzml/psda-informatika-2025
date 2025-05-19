@@ -9,8 +9,7 @@ Konsep indexing dan tabel *hash* pada Hashing mirip seperti halnya pada Array. H
 
 ## Kenapa Pakai Hashing?
 - Memiliki rata-rata kecepatan menyimpan dan mengakses data dengan kompleksitas waktu O(1)
-- Mampu melakukan insert, remove, dan searching dengan kecepatan rata-rata O(1) juga sehingga lebih baik daripada konsep Struktur
-- Data yang lain seperti self-balancing tree dan Linked List
+- Mampu melakukan insert, remove, dan searching dengan kecepatan rata-rata O(1) juga sehingga lebih baik daripada konsep Struktur Data yang lain seperti self-balancing tree dan Linked List
 - Mampu membagi dataset yang besar menjadi dataset yang lebih kecil
 - Digunakan pada database indexing 
 - Digunakan untuk mengamankan data sensitif (enkripsi dan dekripsi)
