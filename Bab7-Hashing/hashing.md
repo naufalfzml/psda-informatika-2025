@@ -27,7 +27,7 @@ Konsep indexing dan tabel *hash* pada Hashing mirip seperti halnya pada Array. H
 
 ## Kapan Tidak Pakai Hashing
 1. Membutuhkan sorted data (menggunakan konsep self balancing tree)
-2. Membutuhkan prefix searching (menggunakan konsep trie)
+2. Membutuhkan prefix searching (menggunakan konsep tree)
    
 ## Jenis Hashing
 ### Hash Set 
