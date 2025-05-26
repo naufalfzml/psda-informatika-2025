@@ -20,7 +20,7 @@ Insertion sort adalah algoritma pengurutan sederhana yang bekerja dengan membagi
 - Penggunaan memori yang tidak efisien
 
 ### Contoh Penerapan
-<!-- ```java
+```java
 public class Main {
     static void insertionSort(int[] arr) {
         int n = arr.length;
@@ -50,7 +50,7 @@ public class Main {
         System.out.println();
     }
 }
-``` -->
+```
 
 ## Tambahan
 [Visualisasi Insertion Sort](https://www.hackerearth.com/practice/algorithms/sorting/insertion-sort/visualize/)
