@@ -3,7 +3,9 @@
 ## Konsep
 Insertion sort adalah algoritma pengurutan sederhana yang bekerja dengan membagi daftar menjadi dua bagian: bagian terurut dan bagian belum terurut. Algoritma ini memproses satu elemen pada satu waktu dan memasukkannya ke posisi yang tepat dalam bagian terurut. Algoritma ini lebih efisien daripada bubble sort dan selection sort dalam beberapa kasus.
 
-![Ilustrasi Insertion Sort](https://github.com/Alfurqon02/Praktikum-SDA-2023/blob/main/Bab8-Sorting/img/insertionsort.jpg)
+![Ilustrasi Insertion Sort](img/insertion-sort_example-1.svg)
+
+![Ilustrasi Insertion Sort](img/insertion-sort.gif)
 
 [Ilustrasi Insertion Sort](https://visualgo.net/en/sorting)
 
