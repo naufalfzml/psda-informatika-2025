@@ -17,7 +17,7 @@ Selection sort adalah algoritma pengurutan sederhana yang bekerja dengan mencari
 - Penggunaan memori yang tidak efisien
 
 ### Contoh Penerapan
-<!-- 
+
 ```java
 public class Main {
     static void selectionSort(int[] arr) {
@@ -50,7 +50,7 @@ public class Main {
         System.out.println();
     }
 }
-``` -->
+```
 
 ## Tambahan
 [Visualisasi Selection Sort](https://www.hackerearth.com/practice/algorithms/sorting/selection-sort/visualize/)
