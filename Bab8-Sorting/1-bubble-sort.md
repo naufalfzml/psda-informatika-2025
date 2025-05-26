@@ -17,7 +17,7 @@ Bubble sort adalah algoritma pengurutan sederhana yang bekerja dengan membanding
 - Jika ada elemen dengan nilai yang sama, posisi dapat berubah setelah dilakukan sorting
 
 ### Contoh Penerapan
-berikut source code untuk menerapkan bubble sort pada array [4, 1, 2, 3]
+<!-- berikut source code untuk menerapkan bubble sort pada array [4, 1, 2, 3]
 
 ```java
 public class Main {
@@ -48,7 +48,7 @@ public class Main {
     }
 }
 
-```
+``` -->
 
 ## Tambahan
 [Visualisasi Bubble Sort](https://www.hackerearth.com/practice/algorithms/sorting/bubble-sort/visualize/)

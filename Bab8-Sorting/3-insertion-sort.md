@@ -17,7 +17,8 @@ Insertion sort adalah algoritma pengurutan sederhana yang bekerja dengan membagi
 - Tidak efisien untuk reverse sorting (pengurutan terbalik)
 - Penggunaan memori yang tidak efisien
 
-```java
+### Contoh Penerapan
+<!-- ```java
 public class Main {
     static void insertionSort(int[] arr) {
         int n = arr.length;
@@ -47,7 +48,7 @@ public class Main {
         System.out.println();
     }
 }
-```
+``` -->
 
 ## Tambahan
 [Visualisasi Insertion Sort](https://www.hackerearth.com/practice/algorithms/sorting/insertion-sort/visualize/)
