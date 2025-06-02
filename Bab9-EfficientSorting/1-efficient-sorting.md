@@ -61,12 +61,85 @@ Algoritma sorting _Mergesort_ merupakan algoritma divide-and-conquer yang membag
 ### Pseudocode
 
 ```
-mergesort(arr[], left, right)
-    if right > left
-        middle = left + (right - left) / 2
-        mergesort(arr, left, middle)
-        mergesort(arr, middle + 1, right)
-        merge(arr, left, middle, right)
+mergeSort(arr):
+    if length of arr <= 1:
+        return
+
+    middle = length of arr / 2
+    leftArr = new array of size middle
+    rightArr = new array of size (length - middle)
+
+    for i from 0 to length - 1:
+        if i < middle:
+            leftArr[i] = arr[i]
+        else:
+            rightArr[i - middle] = arr[i]
+
+    mergeSort(leftArr)
+    mergeSort(rightArr)
+    merge(leftArr, rightArr, arr)
+```
+
+### Fungsi MergeSort(array)
+```java
+public static void mergeSort(int[] arr) {
+        int length = arr.length;
+        if(length <= 1) return; //apabila sudah tidak bisa dibagi
+
+        int middle = length / 2;
+        int[] leftArr = new int[middle];
+        int[] rightArr = new int[length - middle];
+
+        int i = 0; // untuk array kiri
+        int j = 0; // untuk array kanan
+
+        for(; i < length ; i++){
+            if(i < middle){
+                leftArr[i] = arr[i];
+            } else{
+                rightArr[j] = arr[i];
+                j++;
+            }
+        }
+        mergeSort(leftArr);
+        mergeSort(rightArr);
+        merge(leftArr, rightArr, arr);
+    }
+```
+
+### Fungsi Merge(leftArr, rightArr, arr)
+```java
+private static void merge(int[] leftArr, int[] rightArr, int[] arr) {
+
+        int leftSize = arr.length / 2;
+        int rightSize = arr.length - leftSize;
+        int i = 0, l = 0, r = 0;
+
+        // proses merging
+        while (l < leftSize && r < rightSize) { 
+            if(leftArr[l] < rightArr[r]){
+                arr[i] = leftArr[l];
+                i++;
+                l++;
+            } else{
+                arr[i] = rightArr[r];
+                i++;
+                r++;
+            }
+        }
+
+        while (l < leftSize) { 
+            arr[i] = leftArr[l];
+            i++;
+            l++;
+        }
+
+        while (r < rightSize) { 
+            arr[i] = rightArr[r];
+            i++;
+            r++;
+        }
+    }
 ```
 
 ### Contoh Lengkap
