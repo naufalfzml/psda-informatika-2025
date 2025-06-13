@@ -31,4 +31,4 @@ Cara kerja algoritma Dijkstra adalah sebagai berikut:
 
 Untuk contoh dan visualisasinya dapat dilihat [di sini](https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/).
 
-Contoh source code juga dapat dilihat [di sini](./3-shortest-path-dijkstra.cpp)
+Contoh source code juga dapat dilihat [di sini](./3-shortest-path-dijkstra.java)
