@@ -1,4 +1,4 @@
-# 2 - Minimum Spanning Tree
+# Minimum Spanning Tree
 
 Struktur Data Terkait : **Graf**
 

@@ -1,4 +1,4 @@
-# 3 - Shortest Path
+# 2 - Shortest Path
 
 Struktur Data Terkait : **Graf**
 
