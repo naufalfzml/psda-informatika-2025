@@ -32,7 +32,7 @@ Algoritma Kruskal bekerja dengan urutan sebagai berikut:
 
 Untuk contoh dan visualisasinya dapat dilihat [di sini](https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/).
 
-Contoh source code juga dapat dilihat [di sini](./2-mst-kruskal.cpp).
+Contoh source code juga dapat dilihat [di sini](./mst-kruskal.java).
 
 ## Implementasi (Prim's Algorithm)
 
